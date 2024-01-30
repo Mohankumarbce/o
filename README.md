@@ -2,47 +2,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hell</title>
     <style>
-        .image-row {
-            display: flex;
-            justify-content:
-space-between;
-            margin-bottom:
-20px;  
+        #image-container {
+            display: none; /* Initially hide the image container */
+            margin-top: 20px;
         }
-        img {
-            width: 200px;
-            height: 300px;
-            
-        }
-        body {
-            font-family:
-'Arial', sans-serif;
-background-color: #f4f4f4;
-            text-align:
-centre;
-            margin: 50px;
-        }
-        h1 {
-            color:#000000;
-            border-bottom:
-2px solid #000000;
-            padding-bottom:
-10px;
-        }
-        
     </style>
+    <script>
+        function showImage() {
+            // Get the image container
+            var imageContainer = document.getElementById('image-container');
+
+            // Set the source attribute of the image
+            document.getElementById('my-image').src = '/home/vishishtmk/Desktop/a.png';
+
+            // Show the image container
+            imageContainer.style.display = 'block';
+        }
+    </script>
 </head>
 <body>
-    <h1>Hell</h1>
-    <img src="f.jpg" alt="F">
-
-
+    <h1>Show Image Example</h1>
     
+    <!-- Button to trigger the action -->
+    <button onclick="showImage()">Show Image</button>
 
-    <img src="a.png" alt="F">
-    <img src="p.png" alt="F">
-   
+    <!-- Container to hold the image (initially hidden) -->
+    <div id="image-container">
+        <!-- Image element with an initial empty source -->
+        <img id="my-image" src="" alt="Displayed Image">
+    </div>
+
 </body>
 </html>
